@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+
+    <style name="Default" parent="AppTheme">
+
+    </style>
+
+
+
+    <style name="NoTitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/white</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <!--<style name="Base.Widget.Design.TabLayout" parent="android:Widget">-->
+        <!--<item name="tabIndicatorColor">?attr/colorAccent</item>-->
+        <!--<item name="tabIndicatorHeight">2dp</item>-->
+        <!--<item name="tabPaddingStart">12dp</item>-->
+        <!--<item name="tabPaddingEnd">12dp</item>-->
+        <!--<item name="textAllCaps">true</item>-->
+        <!--<item name="tabBackground">?attr/selectableItemBackground</item>-->
+        <!--<item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>-->
+        <!--<item name="tabSelectedTextColor">?android:textColorPrimary</item>-->
+    <!--</style>-->
+
+    <!--<style name="PreferencesTheme">-->
+    <!--<item name="android:windowBackground">@color/transparent</item>-->
+    <!--<item name="android:background">#FFEAEAEA</item>-->
+    <!--<item name="android:textColor">@color/listview_cell_text_color</item>-->
+    <!--</style>-->
+
+
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+
+    <style name="EditTextStyle">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+
+    <style name="checkBoxTheme" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/actionbar_background_color</item>
+        <item name="android:textColorSecondary">@color/actionbar_background_color</item>
+    </style>
+
+</resources>

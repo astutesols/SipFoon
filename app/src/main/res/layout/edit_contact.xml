@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:linphone="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/actionbar_background_color">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/image_padding"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description_all_contacts"
+            android:scaleType="centerCrop"
+            android:text="@string/add_contact_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/contact_save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:padding="@dimen/image_padding"
+            android:src="@drawable/ic_save"
+            android:enabled="false"
+            android:scaleType="centerCrop"
+            android:textColor="@drawable/text_button" />
+
+
+        <ImageView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:padding="@dimen/image_padding"
+            android:src="@drawable/ic_save"
+            android:enabled="false"
+            android:scaleType="centerCrop"
+            android:textColor="@drawable/text_button" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryLightDark">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType = "centerCrop"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/addcontact_header_background" />
+
+                <org.linphone.ui.AvatarWithShadow
+                    android:id="@+id/contactPicture"
+                    android:layout_width="@dimen/large_profile_pic_size"
+                    android:layout_height="@dimen/large_profile_pic_size"
+                    android:background="@drawable/new_unknown_small"
+                    android:layout_centerInParent="true" />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/edit_picture"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:padding="@dimen/image_padding"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_margin="@dimen/menu_icon_margin"-->
+                    <!--android:src="@drawable/contact_edit_profile"-->
+                    <!--android:enabled="true" />-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <EditText
+                        android:id="@+id/contactLastName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="left"
+                        android:hint="@string/contact_last_name"
+                        android:inputType="textPersonName|textCapWords"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/primary_text"
+                        android:textColor="@color/primary_text"
+                        android:textCursorDrawable="@null" />
+
+                    <EditText
+                        android:id="@+id/contactFirstName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/edittext_border"
+                        android:gravity="left"
+                        android:hint="@string/contact_first_name"
+                        android:inputType="textPersonName|textCapWords"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/primary_text"
+                        android:textColor="@color/primary_text"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingTop="10dp" />
+
+
+            <Button
+                android:id="@+id/contact_delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/contact_delete_button"
+                android:padding="7dp"
+                android:text="@string/contact_delete"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_cell_height"
+    android:background="@drawable/list_selector"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin">
+
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_delete"
+        android:src="@drawable/list_delete_default"
+        android:visibility="gone" />
+
+
+    <org.linphone.ui.RoundedImageView
+        android:id="@+id/UserProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/delete"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+    <ImageView
+        android:id="@+id/character_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/delete"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/UserProfile"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/sipUri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/lastMessageTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/listview_cell_text_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/lastMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/listview_cell_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/unreadMessages"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/unread_message_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/draft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/draft"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_selected"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

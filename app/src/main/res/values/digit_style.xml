@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="DialerDigit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+    </style>
+
+    <declare-styleable name="Numpad">
+        <attr name="play_dtmf">
+            <enum name="dont" value="0" />
+            <enum name="play" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <dimen name="preference_item_padding_side">0dp</dimen>
+    <dimen name="preference_item_padding_inner">0dp</dimen>
+
+</resources>

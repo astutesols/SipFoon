@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_small_cell_height"
+    android:background="@drawable/list_selector"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <!--<TextView-->
+    <!--android:id="@+id/separator"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/numpad_background_top"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textStyle="bold" />-->
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_delete"
+        android:src="@drawable/list_delete_default"
+        android:visibility="gone" />
+
+    <org.linphone.ui.RoundedImageView
+        android:id="@+id/UserProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/delete"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+    <ImageView
+        android:id="@+id/character_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/delete"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+
+    <TextView
+        android:id="@+id/sipUri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/call_date"
+        android:layout_toRightOf="@+id/UserProfile"
+        android:lines="1"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/call_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/icon"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/content_description_call_direction"
+        android:src="@drawable/call_status_incoming" />
+
+</RelativeLayout>

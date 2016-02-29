@@ -1,0 +1,20 @@
+<resources>
+
+    <dimen name="numpad_margin_right">10dp</dimen>
+    <dimen name="numpad_margin_left">10dp</dimen>
+    <dimen name="numpad_margin_top">0dp</dimen>
+    <dimen name="numpad_margin_bottom">0dp</dimen>
+
+
+    <dimen name="preference_item_padding_side">0dp</dimen>
+    <dimen name="preference_item_padding_inner">0dp</dimen>
+
+    <dimen name="incall_small_icon_size">42dp</dimen>
+    <dimen name="incall_icon_size">64dp</dimen>
+    <dimen name="incall_top_margin">40dp</dimen>
+
+
+    <dimen name="incoming_icon_size">56dp</dimen>
+
+    <dimen name="large_profile_pic_size">85dp</dimen>
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background">
+
+
+    <!--<org.linphone.ui.EraseButton-->
+    <!--android:id="@+id/Erase"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@id/header"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@drawable/backspace" />-->
+
+    <!--<ToggleButton-->
+    <!--android:id="@+id/start_video"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_below="@id/header"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:background="@drawable/video_check"-->
+    <!--android:textOff=""-->
+    <!--android:textOn="" />-->
+
+    <!--<org.linphone.ui.AddressText-->
+    <!--android:id="@+id/Adress"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/header"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:background="@drawable/dialer_address_edittext"-->
+    <!--android:hint="@string/addressHint"-->
+    <!--android:inputType="textEmailAddress"-->
+    <!--android:textColor="@android:color/white" />-->
+
+
+    <org.linphone.ui.AddressText
+        android:id="@+id/Adress"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:hint="@string/addressHint"
+        android:layout_toLeftOf="@+id/Erase"
+        android:gravity="center_vertical"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+
+    <org.linphone.ui.EraseButton
+        android:id="@+id/Erase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:soundEffectsEnabled="true"
+        android:layout_alignBottom="@+id/Adress"
+        android:src="@drawable/backspace"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+
+    <ListView
+        android:id="@+id/contactsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Adress"
+        android:layout_above="@+id/controls"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/listview_cell_divider_color"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        android:fastScrollEnabled="true"
+        android:visibility="gone"/>
+
+    <org.linphone.ui.Numpad
+        android:id="@+id/Dialer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Adress"
+        android:layout_above="@+id/call_layout"
+        android:contentDescription="@string/content_description_numpad" />
+
+
+    <LinearLayout
+        android:id="@+id/call_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/voicemail"
+            android:layout_width="@dimen/incall_icon_size"
+            android:layout_height="@dimen/incall_icon_size"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/voicemail"
+            android:visibility="invisible"/>
+
+        <org.linphone.ui.CallButton
+            android:id="@+id/Call"
+            android:layout_width="@dimen/incall_icon_size"
+            android:layout_height="@dimen/incall_icon_size"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/call" />
+
+        <org.linphone.ui.EraseButton
+            android:id="@+id/Erase1"
+            android:layout_width="@dimen/incall_icon_size"
+            android:layout_height="@dimen/incall_icon_size"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/backspace"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+
+
+
+    <!-- <LinearLayout
+         android:id="@+id/controls"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:contentDescription="@string/content_description_add_contact"
+             android:id="@+id/addContact"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:adjustViewBounds="true"
+             android:scaleType="fitXY"
+             android:layout_weight="1"
+             android:src="@drawable/add_contact" />
+    -->
+    <!--    <org.linphone.ui.CallButton
+            android:contentDescription="@string/content_description_call"
+            android:id="@+id/Call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_weight="1"
+            android:src="@drawable/call" />
+
+    </LinearLayout> -->
+
+
+</RelativeLayout>

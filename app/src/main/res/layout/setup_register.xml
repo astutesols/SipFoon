@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/login_bottom_padding"
+    android:paddingLeft="@dimen/activity_left_margin"
+    android:paddingRight="@dimen/activity_right_margin">
+
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/ic_company_logo"
+        android:contentDescription="@string/app_name" />
+
+
+    <TextView
+        android:id="@+id/setup_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/setup_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/setup_username_hint"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/EditTextStyle" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/setup_username_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description_setup_ok"
+            android:paddingRight="5dp"
+            android:src="@drawable/wizard_notok" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/setup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:hint="@string/setup_password_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/EditTextStyle" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/setup_password_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description_setup_ok"
+            android:paddingRight="5dp"
+            android:src="@drawable/wizard_notok"
+            android:theme="@style/EditTextStyle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/setup_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:hint="@string/setup_password_confirm_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/EditTextStyle" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/setup_confirm_password_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description_setup_ok"
+            android:paddingRight="5dp"
+            android:src="@drawable/wizard_notok" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/colorAccent">
+
+            <EditText
+                android:id="@+id/setup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/setup_email_hint"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/EditTextStyle" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/setup_email_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description_setup_ok"
+            android:paddingRight="5dp"
+            android:src="@drawable/wizard_notok" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/setup_create"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/content_description_validate"
+        android:text="@string/setup_create"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

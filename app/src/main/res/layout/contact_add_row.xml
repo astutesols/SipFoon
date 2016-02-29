@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/numoraddr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:inputType="textEmailAddress"
+        android:maxLength="25"
+        android:layout_weight="2.8"
+        android:textColorHint="@color/primary_text"
+        android:textColor="@color/primary_text"
+        android:textCursorDrawable="@null" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/content_description_delete"
+        android:gravity="right"
+        android:layout_weight="0.2"
+        android:src="@drawable/contacts_add_default_grey" />
+
+</TableRow>

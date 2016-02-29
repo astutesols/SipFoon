@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/actionbar_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description_all_contacts"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:scaleType="centerCrop"
+            android:text="@string/contact_list"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/newContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/contact_search"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/image_padding"
+            android:src="@drawable/contacts_add_contact"
+            android:contentDescription="@string/content_description_edit"
+            android:textColor="@drawable/text_button" />
+
+        <!--android:background="@android:drawable/ic_menu_edit"-->
+
+        <RelativeLayout
+            android:id="@+id/contact_search"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_layout" >
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/content_description_cancel"
+                android:background="@drawable/ic_search"/>
+
+            <EditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/search_icon"
+                android:background="@drawable/search_button"
+                android:hint="@string/search"
+                android:inputType="textPersonName"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/listview_cell_text_color"
+                android:textColorHint="@color/listview_cell_text_color"
+                android:textCursorDrawable="@null" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/contactsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/listview_cell_divider_color"
+            android:dividerHeight="1dp"
+            android:fastScrollAlwaysVisible="true"
+            android:fastScrollEnabled="true" />
+
+        <TextView
+            android:id="@+id/noSipContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/no_sip_contact"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@drawable/text_color"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/noContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/no_contact"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@drawable/text_color"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

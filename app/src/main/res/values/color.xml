@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorA">#ff5e00</color>
+    <color name="colorB">#000000</color>
+    <color name="colorC">#444444</color>
+    <color name="colorD">#808080</color>
+    <color name="colorE">#c4c4c4</color>
+    <color name="colorF">#e1e1e1</color>
+    <color name="colorG">#f3f3f3</color>
+    <color name="colorH">#ffffff</color>
+    <color name="colorI">#ff0000</color>
+    <color name="colorJ">#ffa645</color>
+    <color name="colorK">#3eb5c0</color>
+    <color name="colorL">#96c11f</color>
+
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#455a64</color>
+    <color name="colorPrimaryLight">#cfd8dc</color>
+    <color name="colorPrimaryLightDark">#b0bec5</color>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="colorAccent">#009688</color>
+    <color name="applyColor">#3e5661</color>
+    <color name="dividerColor">#B6B6B6</color>
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#727272</color>
+    <color name="gray_border">#ff828A95</color>
+    <color name="dialer_address_background">#ff506DA0</color>
+    <color name="blue_background">#ff396697</color>
+    <color name="blue_text">#ff66b3ff</color>
+    <color name="bottom_menu_icon_color">#78909c</color>
+    <color name="actionbar_background_color">#607d8b</color>
+
+
+    <color name="login_button_background_color">#0e4f59</color>
+    <color name="menu_bottom_background_color">#263238</color>
+    <color name="listview_cell_text_color">#535353</color>
+    <color name="listview_cell_divider_color">#f8f8f8</color>
+    <color name="listview_cell_dark_divider_color">#dfdfdf</color>
+    <color name="contact_detail_name_background_color">#f0fbf7</color>
+
+    <color name="contact_detail_name_divider_color">#edf4f2</color>
+    <color name="edittext_border_color">#dfdfdf</color>
+
+    <color name="contact_save_button_background_color">#20a193</color>
+    <color name="contact_delete_button_background_color">#ff7070</color>
+    <color name="light_red">#f1746e</color>
+    <color name="edittext_bottom_border_color">#47b8c6</color>
+    <color name="edittext_text_color">#058292</color>
+    <color name="numpad_default_color">#e1f2f4</color>
+    <color name="numpad_default_border_color">#96d6de</color>
+    <color name="green">#00ff00</color>
+    <color name="settings_dot_color">#b5e2e7</color>
+    <color name="chat_incoming_color">#e0e9f0</color>
+    <color name="chat_outgoing_color">#f1746e</color>
+
+
+    <color name="chat_bottom_background_color">#f3f7fa</color>
+
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="main_app_color">#ffcf4c29</color>
+
+    <color name="text_selected">#ffcf4c29</color>
+    <color name="text_over">#ffb9c4cb</color>
+    <color name="text_default">#ff5b656f</color>
+    <color name="text_disabled">#ffa6b3bf</color>
+    <color name="text_header">#ff7e8e9e</color>
+
+    <color name="text_switch_selected">#ffffff</color>
+    <color name="text_switch">#ff41484f</color>
+
+    <color name="text_button">#ff41484f</color>
+    <color name="text_button_disabled">#ffa6b3bf</color>
+    <color name="text_button_selected">#ff41484f</color>
+    <color name="text_button_over">#ffcf4c29</color>
+
+    <color name="numpad_background_bottom">#ffe4edf2</color>
+    <color name="numpad_background_dialer">#ffd8d8d8</color>
+    <color name="numpad_background_top">#ffb1bdc3</color>
+
+    <color name="missed_calls_background">#ffcf4c29</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="landscape_background">#CCCCCC</color>
+
+    <color name="text_contrast">#ff000000</color> <!-- If background is white, set to black, else set to white -->
+    <color name="menu_button_background">#ff262a2e</color>
+
+
+</resources>

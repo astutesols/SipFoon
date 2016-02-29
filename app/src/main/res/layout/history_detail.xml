@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:linphone="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/actionbar_background_color">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_back_btn"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description_all_contacts"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/call_details"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLightDark">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType = "centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/addcontact_header_background" />
+
+        <org.linphone.ui.AvatarWithShadow
+            android:id="@+id/contactPicture"
+            android:layout_width="@dimen/large_profile_pic_size"
+            android:layout_height="@dimen/large_profile_pic_size"
+            android:background="@drawable/new_unknown_small"
+            android:layout_centerInParent="true" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/profile_header"
+        android:background="@color/listview_cell_divider_color">
+
+        <ImageView
+            android:id="@+id/UserCharacter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true" />
+
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/dialBack"
+            android:layout_toRightOf="@+id/UserCharacter"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/primary_text" />
+
+
+        <TextView
+            android:id="@+id/contactAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactName"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/dialBack"
+            android:layout_toRightOf="@+id/UserCharacter"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/listview_cell_dark_divider_color" />
+
+        <ImageView
+            android:id="@+id/chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/content_description_chat"
+            android:src="@drawable/chat_message_drawable" />
+
+        <ImageView
+            android:id="@+id/dialBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@id/chat"
+            android:contentDescription="@string/content_description_dial_back"
+            android:src="@drawable/call_answer" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/logRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/callDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/callDirection"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/primary_text" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/listview_cell_divider_color" />
+
+
+    <!--    <RelativeLayout
+            android:id="@+id/addContactRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logRow"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/addToContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/content_description_add_contact"
+                android:src="@drawable/button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/add_to_contacts"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>    -->
+
+</LinearLayout>

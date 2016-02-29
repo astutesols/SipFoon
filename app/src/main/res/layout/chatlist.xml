@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/actionbar_background_color">
+
+        <ImageView
+            android:id="@+id/newDiscussion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:layout_centerVertical="true"
+            android:src="@drawable/contacts_add_contact"
+            android:padding="@dimen/image_padding"
+            android:contentDescription="@string/content_description_new_discussion"
+            android:textColor="@drawable/text_button" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_back_btn"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/newDiscussion"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:src="@drawable/ic_menu_edit"
+            android:contentDescription="@string/content_description_edit"
+            android:gravity="center"
+            android:textColor="@drawable/text_button" />
+
+        <TextView
+            android:id="@+id/delete_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/image_padding"
+            android:layout_centerVertical="true"
+            android:background="@drawable/chat_send_layout"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:text="@string/button_chat_delete_all_message"
+            android:textColor="@color/white" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/ok"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="@dimen/menu_icon_margin"-->
+            <!--android:background="@drawable/contact_ok_over"-->
+            <!--android:contentDescription="@string/content_description_validate"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@drawable/text_button"-->
+            <!--android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:layout_toRightOf="@+id/back"
+            android:text="@string/chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"/>
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/dialer_address_background">
+
+         <ImageView
+             android:id="@+id/clearFastChatField"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:adjustViewBounds="true"
+             android:contentDescription="@string/content_description_cancel"
+             android:paddingLeft="5dp"
+             android:paddingRight="5dp"
+             android:src="@drawable/list_delete" />
+
+         <EditText
+             android:id="@+id/newFastChat"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_toLeftOf="@id/clearFastChatField"
+             android:background="@color/dialer_address_background"
+             android:gravity="center"
+             android:hint="@string/new_fast_chat"
+             android:inputType="textEmailAddress"
+             android:paddingBottom="10dp"
+             android:paddingLeft="5dp"
+             android:paddingRight="5dp"
+             android:paddingTop="10dp"
+             android:textColor="@android:color/white"
+             android:textColorHint="@android:color/white"
+             android:textCursorDrawable="@null" />
+     </RelativeLayout>
+ -->
+    <ListView
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/listview_cell_divider_color"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@+id/noChatHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_chat_history"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@drawable/text_color"
+        android:visibility="gone" />
+
+</LinearLayout>

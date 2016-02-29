@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/actionbar_background_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_description_all_contacts"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:scaleType="centerCrop"
+            android:text="@string/call_history"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:padding="@dimen/image_padding"
+            android:src="@drawable/ic_menu_edit"
+            android:contentDescription="@string/content_description_edit"/>
+
+        <ImageView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/menu_icon_margin"
+            android:padding="@dimen/image_padding"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/content_description_validate"
+            android:visibility="gone" />
+        <!--android:background="@android:drawable/ic_menu_edit"-->
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/historyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/listview_cell_divider_color"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@+id/noCallHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_call_history"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/noMissedCallHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_missed_call_history"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+</LinearLayout>

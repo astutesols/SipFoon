@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="@string/menu_title_key"
+        android:layout="@layout/preference_header_layout"
+        android:title="@string/menu_title" />
+
+    <Preference
+        android:key="@string/menu_about_key"
+        android:layout="@layout/preference_layout"
+        android:title="@string/menu_about" />
+
+    <PreferenceCategory
+        android:key="@string/pref_sipaccounts_key"
+        android:layout="@layout/preference_category_layout"
+        android:title="@string/pref_sipaccounts" />
+
+    <Preference
+        android:key="@string/setup_key"
+        android:title="@string/setup_title" />
+
+    <Preference
+        android:key="@string/pref_add_account_key"
+        android:title="@string/pref_add_account" />
+
+    <PreferenceCategory
+        android:key="@string/pref_tunnel_key"
+        android:title="@string/pref_tunnel">
+
+        <EditTextPreference
+            android:key="@string/pref_tunnel_host_key"
+            android:title="@string/pref_tunnel_host" />
+
+        <EditTextPreference
+            android:key="@string/pref_tunnel_port_key"
+            android:numeric="integer"
+            android:title="@string/pref_tunnel_port" />
+
+        <ListPreference
+            android:entries="@array/tunnel_mode_entries"
+            android:entryValues="@array/tunnel_mode_entry_values"
+            android:key="@string/pref_tunnel_mode_key"
+            android:title="@string/pref_tunnel_mode" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_second_category_layout"
+        android:title="@string/pref_preferences">
+
+        <CheckBoxPreference
+            android:key="@string/pref_video_enable_key"
+            android:layout="@layout/preference_checkbox_layout"
+            android:title="@string/pref_video_enable_title" />
+
+        <PreferenceScreen
+            android:layout="@layout/preference_screen_layout"
+            android:icon="@null"
+            android:title="@string/pref_audio">
+
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_echo_cancellation_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:summary="@string/pref_echo_cancellation_summary"-->
+                <!--android:title="@string/pref_echo_cancellation" />-->
+
+            <!--<Preference-->
+                <!--android:key="@string/pref_echo_canceller_calibration_key"-->
+                <!--android:layout="@layout/preference_screen_layout_without_summary"-->
+                <!--android:title="@string/pref_echo_canceller_calibration" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_adaptive_rate_control_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_adaptive_rate_control" />-->
+
+            <!--<ListPreference-->
+                <!--android:entries="@array/adaptive_rate_algorithm_entries"-->
+                <!--android:entryValues="@array/adaptive_rate_algorithm_entries"-->
+                <!--android:key="@string/pref_adaptive_rate_algorithm_key"-->
+                <!--android:layout="@layout/preference_screen_layout_with_summary"-->
+                <!--android:title="@string/pref_adaptive_rate_algorithm" />-->
+
+            <!--<ListPreference-->
+                <!--android:entries="@array/limit_bitrate_entries"-->
+                <!--android:entryValues="@array/limit_bitrate_entry_values"-->
+                <!--android:key="@string/pref_codec_bitrate_limit_key"-->
+                <!--android:layout="@layout/preference_screen_layout_with_summary"-->
+                <!--android:title="@string/pref_codec_bitrate_limit" />-->
+
+            <!--<PreferenceCategory-->
+                <!--android:key="@string/pref_codecs_key"-->
+                <!--android:layout="@layout/preference_category_layout"-->
+                <!--android:title="@string/pref_codecs" />-->
+
+
+            <CheckBoxPreference
+                android:key="@string/pref_echo_cancellation_key"
+                android:summary="@string/pref_echo_cancellation_summary"
+                android:title="@string/pref_echo_cancellation" />
+
+            <Preference
+                android:key="@string/pref_echo_canceller_calibration_key"
+                android:title="@string/pref_echo_canceller_calibration" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_adaptive_rate_control_key"
+                android:title="@string/pref_adaptive_rate_control" />
+
+            <ListPreference
+                android:entries="@array/adaptive_rate_algorithm_entries"
+                android:entryValues="@array/adaptive_rate_algorithm_entries"
+                android:key="@string/pref_adaptive_rate_algorithm_key"
+                android:title="@string/pref_adaptive_rate_algorithm" />
+
+            <ListPreference
+                android:entries="@array/limit_bitrate_entries"
+                android:entryValues="@array/limit_bitrate_entry_values"
+                android:key="@string/pref_codec_bitrate_limit_key"
+                android:title="@string/pref_codec_bitrate_limit" />
+
+            <PreferenceCategory
+                android:key="@string/pref_codecs_key"
+                android:title="@string/pref_codecs" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:dependency="@string/pref_video_enable_key"
+            android:key="@string/pref_video_key"
+            android:layout="@layout/preference_screen_layout"
+            android:shouldDisableView="true"
+            android:title="@string/pref_video">
+
+            <!--<Preference-->
+                <!--android:key="@string/menu_title_key"-->
+                <!--android:layout="@layout/preference_header_layout"-->
+                <!--android:title="@string/menu_video_settings" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:dependency="@string/pref_video_enable_key"-->
+                <!--android:key="@string/pref_video_use_front_camera_key"-->
+                <!--android:layout="@layout/hidden"-->
+                <!--android:title="@string/pref_video_use_front_camera_title" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:dependency="@string/pref_video_enable_key"-->
+                <!--android:key="@string/pref_video_initiate_call_with_video_key"-->
+                <!--android:summary="@string/pref_video_initiate_call_with_video"-->
+                <!--android:title="@string/pref_video_initiate_call_with_video_title" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:dependency="@string/pref_video_enable_key"-->
+                <!--android:key="@string/pref_video_automatically_share_my_video_key"-->
+                <!--android:layout="@layout/hidden"-->
+                <!--android:summary="@string/pref_video_automatically_share_my_video"-->
+                <!--android:title="@string/pref_video_automatically_share_my_video_title" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:dependency="@string/pref_video_enable_key"-->
+                <!--android:key="@string/pref_video_automatically_accept_video_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:summary="@string/pref_video_automatically_accept_video"-->
+                <!--android:title="@string/pref_video_automatically_accept_video_title" />-->
+
+            <!--<ListPreference-->
+                <!--android:key="@string/pref_preferred_video_size_key"-->
+                <!--android:layout="@layout/preference_screen_layout_with_summary"-->
+                <!--android:title="@string/pref_preferred_video_size" />-->
+
+            <!--<PreferenceCategory-->
+                <!--android:dependency="@string/pref_video_enable_key"-->
+                <!--android:key="@string/pref_video_codecs_key"-->
+                <!--android:layout="@layout/preference_category_layout"-->
+                <!--android:shouldDisableView="true"-->
+                <!--android:title="@string/pref_video_codecs_title" />-->
+
+
+            <CheckBoxPreference
+                android:dependency="@string/pref_video_enable_key"
+                android:key="@string/pref_video_use_front_camera_key"
+                android:layout="@layout/hidden"
+                android:title="@string/pref_video_use_front_camera_title" />
+
+            <CheckBoxPreference
+                android:dependency="@string/pref_video_enable_key"
+                android:key="@string/pref_video_initiate_call_with_video_key"
+                android:summary="@string/pref_video_initiate_call_with_video"
+                android:title="@string/pref_video_initiate_call_with_video_title" />
+
+            <CheckBoxPreference
+                android:dependency="@string/pref_video_enable_key"
+                android:key="@string/pref_video_automatically_share_my_video_key"
+                android:layout="@layout/hidden"
+                android:summary="@string/pref_video_automatically_share_my_video"
+                android:title="@string/pref_video_automatically_share_my_video_title" />
+
+            <CheckBoxPreference
+                android:dependency="@string/pref_video_enable_key"
+                android:key="@string/pref_video_automatically_accept_video_key"
+                android:summary="@string/pref_video_automatically_accept_video"
+                android:title="@string/pref_video_automatically_accept_video_title" />
+
+            <ListPreference
+                android:key="@string/pref_preferred_video_size_key"
+                android:title="@string/pref_preferred_video_size" />
+
+            <PreferenceCategory
+                android:dependency="@string/pref_video_enable_key"
+                android:key="@string/pref_video_codecs_key"
+                android:shouldDisableView="true"
+                android:title="@string/pref_video_codecs_title" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="@string/pref_call_settings_key"
+            android:layout="@layout/preference_screen_layout"
+            android:title="@string/call">
+
+            <!--<Preference-->
+                <!--android:key="@string/menu_title_key"-->
+                <!--android:layout="@layout/preference_header_layout"-->
+                <!--android:title="@string/menu_call_settings" />-->
+
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_sipinfo_dtmf_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_sipinfo_dtmf" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_rfc2833_dtmf_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:selectable="false"-->
+                <!--android:title="@string/pref_rfc2833_dtmf" />-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="@string/pref_voice_mail_key"-->
+                <!--android:title="@string/pref_voice_mail" />-->
+
+
+            <CheckBoxPreference
+                android:key="@string/pref_sipinfo_dtmf_key"
+                android:title="@string/pref_sipinfo_dtmf" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_rfc2833_dtmf_key"
+                android:selectable="false"
+                android:title="@string/pref_rfc2833_dtmf" />
+
+            <EditTextPreference
+                android:key="@string/pref_voice_mail_key"
+                android:title="@string/pref_voice_mail" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:layout="@layout/preference_screen_layout"
+            android:title="@string/pref_network_title">
+
+            <!--<Preference-->
+                <!--android:key="@string/menu_title_key"-->
+                <!--android:layout="@layout/preference_header_layout"-->
+                <!--android:title="@string/menu_network_settings" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_wifi_only_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_wifi_only" />-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="@string/pref_stun_server_key"-->
+                <!--android:layout="@layout/preference_screen_layout_without_summary"-->
+                <!--android:title="@string/pref_stun_server" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_ice_enable_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_ice_enable" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_upnp_enable_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_upnp_enable" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_transport_use_random_ports_key"-->
+                <!--android:title="@string/pref_transport_use_random_ports" />-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="@string/pref_sip_port_key"-->
+                <!--android:layout="@layout/preference_screen_layout_with_summary_without_forward"-->
+                <!--android:numeric="integer"-->
+                <!--android:title="@string/pref_sip_port_title" />-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="@string/pref_audio_port_key"-->
+                <!--android:layout="@layout/hidden"-->
+                <!--android:summary="@string/pref_audio_port_description"-->
+                <!--android:title="@string/pref_audio_port_title" />-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="@string/pref_video_port_key"-->
+                <!--android:layout="@layout/hidden"-->
+                <!--android:summary="@string/pref_video_port_description"-->
+                <!--android:title="@string/pref_video_port_title" />-->
+
+            <!--<ListPreference-->
+                <!--android:key="@string/pref_media_encryption_key"-->
+                <!--android:title="@string/pref_media_encryption" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_push_notification_key"-->
+                <!--android:layout="@layout/preference_checkbox_layout"-->
+                <!--android:title="@string/pref_push_notification" />-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="@string/pref_ipv6_key"-->
+                <!--android:title="@string/pref_ipv6_title" />-->
+
+
+            <CheckBoxPreference
+                android:key="@string/pref_wifi_only_key"
+                android:title="@string/pref_wifi_only" />
+
+            <EditTextPreference
+                android:key="@string/pref_stun_server_key"
+                android:title="@string/pref_stun_server" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_ice_enable_key"
+                android:title="@string/pref_ice_enable" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_upnp_enable_key"
+                android:title="@string/pref_upnp_enable" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_transport_use_random_ports_key"
+                android:title="@string/pref_transport_use_random_ports" />
+
+            <EditTextPreference
+                android:key="@string/pref_sip_port_key"
+                android:numeric="integer"
+                android:title="@string/pref_sip_port_title" />
+
+            <EditTextPreference
+                android:key="@string/pref_audio_port_key"
+                android:layout="@layout/hidden"
+                android:summary="@string/pref_audio_port_description"
+                android:title="@string/pref_audio_port_title" />
+
+            <EditTextPreference
+                android:key="@string/pref_video_port_key"
+                android:layout="@layout/hidden"
+                android:summary="@string/pref_video_port_description"
+                android:title="@string/pref_video_port_title" />
+
+            <ListPreference
+                android:key="@string/pref_media_encryption_key"
+                android:title="@string/pref_media_encryption" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_push_notification_key"
+                android:title="@string/pref_push_notification" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_ipv6_key"
+                android:title="@string/pref_ipv6_title" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="@string/pref_advanced_key"
+            android:layout="@layout/preference_screen_layout"
+            android:title="@string/pref_advanced">
+
+            <CheckBoxPreference
+                android:key="@string/pref_debug_key"
+                android:title="@string/pref_debug" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_background_mode_key"
+                android:title="@string/pref_background_mode" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_animation_enable_key"
+                android:title="@string/pref_animation_enable_title" />
+
+            <CheckBoxPreference
+                android:key="@string/pref_autostart_key"
+                android:title="@string/pref_autostart" />
+
+            <EditTextPreference
+                android:key="@string/pref_incoming_call_timeout_key"
+                android:layout="@layout/hidden"
+                android:title="@string/pref_incoming_call_timeout_title" />
+
+            <EditTextPreference
+                android:key="@string/pref_image_sharing_server_key"
+                android:title="@string/pref_image_sharing_server_title" />
+
+            <EditTextPreference
+                android:key="@string/pref_remote_provisioning_key"
+                android:title="@string/pref_remote_provisioning_title" />
+
+            <PreferenceCategory android:title="@string/pref_primary_account_title"
+                android:layout="@layout/hidden">
+
+                <EditTextPreference
+                    android:key="@string/pref_display_name_key"
+                    android:title="@string/pref_display_name_title"
+                    android:layout="@layout/hidden" />
+
+                <EditTextPreference
+                    android:key="@string/pref_user_name_key"
+                    android:title="@string/pref_user_name_title"
+                    android:layout="@layout/hidden" />
+
+            </PreferenceCategory>
+
+            <PreferenceScreen
+                android:layout="@layout/hidden"
+                android:title="@string/pref_audio_hacks_title">
+
+                <CheckBoxPreference
+                    android:key="@string/pref_audio_hacks_use_routing_api_key"
+                    android:title="@string/pref_audio_hacks_use_routing_api_title" />
+
+                <CheckBoxPreference
+                    android:key="@string/pref_audio_hacks_use_galaxys_hack_key"
+                    android:title="@string/pref_audio_hacks_use_galaxys_hack_title" />
+
+                <EditTextPreference
+                    android:key="@string/pref_audio_use_specific_mode_key"
+                    android:numeric="integer"
+                    android:summary="@string/pref_audio_use_specific_mode_summary"
+                    android:title="@string/pref_audio_use_specific_mode_title" />
+
+            </PreferenceScreen>
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/pref_linphone_friend_key"
+        android:layout="@layout/preference_category_layout"
+        android:title="@string/pref_linphone_friend_title">
+
+        <CheckBoxPreference
+            android:key="@string/pref_auto_accept_friends_key"
+            android:summary="@string/pref_auto_accept_friends_desc"
+            android:title="@string/pref_auto_accept_friends_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/pref_logout_option_key"
+        android:layout="@layout/preference_second_category_layout"
+        android:title="@string/pref_logout_key_title">
+
+        <Preference
+            android:key="@string/pref_exit_key"
+            android:layout="@layout/preference_screen_layout_without_summary_and_divider"
+            android:title="@string/pref_exit_title" />
+
+        <Preference
+            android:key="@string/pref_logout_exit_key"
+            android:layout="@layout/preference_screen_layout_without_summary_and_divider"
+            android:title="@string/pref_logout_exit_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

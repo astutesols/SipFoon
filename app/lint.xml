@@ -1,0 +1,3 @@
+
+<!-- Change the severity of hardcoded strings to "error" -->
+<issue id="Instantiatable" severity="warning" />

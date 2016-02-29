@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:background="@drawable/main_background"
+    android:paddingBottom="@dimen/login_bottom_padding"
+    android:paddingLeft="@dimen/activity_left_margin"
+    android:paddingRight="@dimen/activity_right_margin">
+
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_company_logo"
+        android:contentDescription="@string/app_name" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_username"
+        android:theme="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/white">
+
+        <EditText
+            android:id="@+id/setup_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setup_username_hint"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:theme="@style/EditTextStyle" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:theme="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/white">
+
+        <EditText
+            android:id="@+id/setup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:hint="@string/setup_password_hint"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:theme="@style/EditTextStyle" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_domain"
+        android:theme="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/white">
+
+        <EditText
+            android:id="@+id/setup_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/setup_domain_hint"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:theme="@style/EditTextStyle" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/setup_apply"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/applyColor"
+        android:contentDescription="@string/content_description_validate"
+        android:src="@drawable/button"
+        android:text="@string/setup_apply"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

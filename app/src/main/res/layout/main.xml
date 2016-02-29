@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Hack to adjust perfectly on every screen the bottom of the fragment with the curved menu -->
+    <LinearLayout
+        android:id="@+id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:background="@color/menu_bottom_background_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_mark"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_mark"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_mark"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_mark"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/content_description_mark"
+            android:scaleType="fitXY"
+            android:src="@drawable/mark"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mark"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" />
+
+        <fragment
+            android:id="@+id/status"
+            android:name="org.linphone.StatusFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            tools:layout="@layout/status" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@id/mark"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true">
+
+            <include layout="@layout/menu_history_button" />
+
+            <TextView
+                android:id="@+id/missedCalls"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/missed_calls_bg"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true">
+
+
+            <include layout="@layout/menu_contact_button" />
+
+        </RelativeLayout>
+
+        <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:visibility="invisible" />-->
+
+        <ImageView
+            android:id="@+id/dialer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:contentDescription="@string/content_description_dialer"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dialer" />
+
+        <RelativeLayout
+            android:id="@+id/completeChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true">
+
+            <include layout="@layout/menu_chat_button" />
+
+            <TextView
+                android:id="@+id/missedChats"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/missed_calls_bg"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/menu_settings_button" />
+
+    </LinearLayout>
+
+    <!--<org.linphone.ui.CallButton-->
+        <!--android:id="@+id/Call"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/mark"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:src="@drawable/call" />-->
+
+    <LinearLayout
+        android:id="@+id/fragmentContainer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+</RelativeLayout>

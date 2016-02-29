@@ -1,0 +1,59 @@
+<resources>
+
+
+    <dimen name="bottom_bar_height">48dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="week_top_margin">74px</dimen>
+    <dimen name="week_left_margin">50px</dimen>
+    <dimen name="cell_width">58px</dimen>
+    <dimen name="cell_heigh">53px</dimen>
+    <dimen name="cell_margin_top">92px</dimen>
+    <dimen name="cell_margin_left">39px</dimen>
+    <dimen name="cell_text_size">16px</dimen>
+
+    <dimen name="image_padding">16dp</dimen>
+    <dimen name="subtitle_height">48dp</dimen>
+    <dimen name="listview_cell_height">72dp</dimen>
+    <dimen name="listview_small_cell_height">64dp</dimen>
+    <dimen name="listview_tiny_cell_height">48dp</dimen>
+    <dimen name="listview_text_left_margin">56dp</dimen>
+    <dimen name="listview_text_top_margin">10dp</dimen>
+
+    <dimen name="numpad_margin">15dp</dimen>
+    <dimen name="numpad_left_margin">10dp</dimen>
+
+    <dimen name="title_margin">24dp</dimen>
+    <dimen name="title_text_size">22sp</dimen>
+
+    <dimen name="menu_icon_margin">5dp</dimen>
+
+    <dimen name="preference_item_padding_side">0dp</dimen>
+    <dimen name="preference_item_padding_inner">0dp</dimen>
+
+
+    <dimen name="incall_small_icon_size">36dp</dimen>
+    <dimen name="incall_medium_icon_size">56dp</dimen>
+    <dimen name="incall_icon_size">56dp</dimen>
+    <dimen name="incall_top_margin">50dp</dimen>
+    <dimen name="incall_bottom_margin">35dp</dimen>
+
+    <dimen name="incoming_icon_size">64dp</dimen>
+
+    <dimen name="large_profile_pic_size">95dp</dimen>
+
+    <dimen name="numpad_all_margin">20dp</dimen>
+    <dimen name="numpad_top_bottom_margin">20dp</dimen>
+
+    <dimen name="incall_numpad_all_margin">20dp</dimen>
+    <dimen name="incall_numpad_top_bottom_margin">30dp</dimen>
+
+
+    <dimen name="profile_vetical_margin">16dp</dimen>
+
+
+    <dimen name="login_bottom_padding">50dp</dimen>
+
+</resources>

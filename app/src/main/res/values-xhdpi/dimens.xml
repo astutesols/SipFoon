@@ -1,0 +1,35 @@
+<resources>
+
+    <dimen name="numpad_margin_left">10dp</dimen>
+    <dimen name="numpad_margin_right">10dp</dimen>
+    <dimen name="numpad_margin_top">0dp</dimen>
+    <dimen name="numpad_margin_bottom">0dp</dimen>
+
+    <dimen name="login_screen_text_size">16dp</dimen>
+    <dimen name="contact_details_text">16dp</dimen>
+
+    <dimen name="bottom_bar_height">56dp</dimen>
+
+    <dimen name="preference_item_padding_side">0dp</dimen>
+    <dimen name="preference_item_padding_inner">0dp</dimen>
+
+    <dimen name="incall_small_icon_size">42dp</dimen>
+    <dimen name="incall_icon_size">64dp</dimen>
+    <dimen name="incall_top_margin">70dp</dimen>
+    <dimen name="incall_bottom_margin">50dp</dimen>
+
+    <dimen name="incoming_icon_size">72dp</dimen>
+    <dimen name="numpad_margin">20dp</dimen>
+    <dimen name="numpad_left_margin">13dp</dimen>
+
+    <dimen name="numpad_all_margin">30dp</dimen>
+    <dimen name="incall_numpad_all_margin">30dp</dimen>
+    <dimen name="incall_numpad_top_bottom_margin">50dp</dimen>
+    <dimen name="numpad_top_bottom_margin">20dp</dimen>
+
+    <dimen name="large_profile_pic_size">95dp</dimen>
+
+    <dimen name="profile_vetical_margin">24dp</dimen>
+
+    <dimen name="login_bottom_padding">70dp</dimen>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_small_cell_height"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/list_selector">
+
+    <!--<TextView-->
+        <!--android:id="@+id/separator"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:background="@color/numpad_background_top"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textStyle="bold" />-->
+    <!-- this is header of listview for ABCD-->
+
+    <org.linphone.ui.RoundedImageView
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+    <ImageView
+        android:id="@+id/character_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_contact_picture"
+        android:src="@drawable/unknown_small" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="68dp"
+        android:layout_marginRight="5dp"
+        android:lines="1"
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"/>
+
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:lines="1"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/primary_text"/>
+
+    <ImageView
+        android:id="@+id/friendStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/led_connected"
+        android:visibility="gone" />
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal">-->
+
+       <!-- -->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>
